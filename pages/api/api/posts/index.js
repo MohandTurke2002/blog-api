@@ -19,6 +19,7 @@ const handlerGetPosts = async (req, res) => {
       res.json({ error });
     }
   }
+  res.send("hello world");
 };
 
 export default handlerGetPosts;
