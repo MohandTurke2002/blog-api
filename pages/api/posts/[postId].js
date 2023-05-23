@@ -1,7 +1,7 @@
 import Posts from "@/models/Post";
 import dbConnect from "@/utils/dbConnect";
 
-export const handlerDeletPost = async (req, res) => {
+const handlerDeletPost = async (req, res) => {
   if (req.method === "DELETE") {
     try {
       await dbConnect();
@@ -33,6 +33,4 @@ export const handlerDeletPost = async (req, res) => {
   }
 };
 
-export function handler(req, res) {
-  res.status(200).json({ name: "John Doe" });
-}
+export default handlerDeletPost;

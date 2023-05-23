@@ -1,7 +1,7 @@
 import Posts from "@/models/Post";
 import dbConnect from "@/utils/dbConnect";
 
-export const handlerGetPosts = async (req, res) => {
+const handlerGetPosts = async (req, res) => {
   if (req.method === "GET") {
     try {
       await dbConnect();
@@ -21,6 +21,4 @@ export const handlerGetPosts = async (req, res) => {
   }
 };
 
-export function handler(req, res) {
-  res.status(200).json({ name: "John Doe" });
-}
+export default handlerGetPosts;
